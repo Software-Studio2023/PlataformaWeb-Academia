@@ -1,20 +1,26 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const course = ref([])
+
+
+const getCourse = async () => {
+   const response = await axios.get('http://localhost:3000/api/curso/')
+   const result = response.data
+   console.log(result)
+
+}
+
+onMounted(() => {
+  getCourse()
 })
+
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+   <h1>Hello</h1>
   </div>
 </template>
 
