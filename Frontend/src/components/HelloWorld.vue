@@ -20,7 +20,7 @@ onMounted(() => {
 
 <template>
   <div class="greetings">
-   <h1>Hello</h1>
+   <h1>Software Studios</h1>
   </div>
 </template>
 
@@ -28,8 +28,9 @@ onMounted(() => {
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
-  position: relative;
+  position: static;
   top: -10px;
+  color: blue;
 }
 
 h3 {
