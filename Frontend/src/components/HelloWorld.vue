@@ -1,8 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
+import CreateStudents from './CreateStudents.vue';
 
-const course = ref([])
+const course = ref([]);
 
 
 const getCourse = async () => {
@@ -22,6 +23,7 @@ onMounted(() => {
   <div class="greetings">
    <h1>Software Studios</h1>
   </div>
+  <CreateStudents/>
 </template>
 
 <style scoped>

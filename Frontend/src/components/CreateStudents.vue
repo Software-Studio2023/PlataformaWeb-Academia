@@ -1,0 +1,37 @@
+<template>
+    <div>
+        <h1>Registro de Usuario</h1>
+        <form @submit.prevent="CreateStudents">
+
+           <label for="studentsName">Nombre</label>
+           <input type="text" id="studentsName" v-model="studentsName" required>
+           
+           <label for="studentsLastname">Apellido</label>
+           <input type="text" id="studentsLastname" v-model="studentsLastname" required>
+           
+           <label for="studentsEmail">Corro Electronico</label>
+           <input type="text" id="stundentsEmail" v-model="studentsEmail" required>
+
+           <label for="studentsRol">Indique su Rol</label>
+           <input type="text" id="studentsRol" v-model="studentsRol" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</template>
+
+<script setup>
+    import  {ref} from 'vue';
+    import axios from 'axios';
+    
+    const studentsName = ref("");
+    const studentsLastname = ref("");
+    const studentsEmail = ref("");
+    const studentsRol = ref("");
+
+    const CreateStudents = async() => {
+        const response = await 
+        axios.post('http://localhost:3000/api/students', { name:studentsName.value, lastname:studentsLastname.value, email:studentsEmail.value, rol:studentsRol.value})
+        console.log(response.data);
+    }
+
+</script>
