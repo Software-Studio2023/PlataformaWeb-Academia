@@ -30,7 +30,7 @@
 
     const CreateStudents = async() => {
         const response = await 
-        axios.post('http://localhost:3000/api/students', { name:studentsName.value, lastname:studentsLastname.value, email:studentsEmail.value, rol:studentsRol.value})
+        axios.post('http://localhost:3000/api/students/', { name:studentsName.value, lastname:studentsLastname.value, email:studentsEmail.value, rol:studentsRol.value})
         console.log(response.data);
     }
 
