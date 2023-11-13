@@ -9,7 +9,7 @@
            <label for="studentsLastname">Apellido</label>
            <input type="text" id="studentsLastname" v-model="studentsLastname" required>
            
-           <label for="studentsEmail">Corro Electronico</label>
+           <label for="studentsEmail">Email</label>
            <input type="text" id="stundentsEmail" v-model="studentsEmail" required>
 
            <label for="studentsRol">Indique su Rol</label>
