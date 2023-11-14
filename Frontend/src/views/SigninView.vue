@@ -4,7 +4,7 @@ import SignIn from '../components/SignIn.vue'
 
 
 <template>
-  <SignIn />
+  <SignIn/>
 </template>
 
 <style>

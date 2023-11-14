@@ -4,6 +4,6 @@ import CreateStudents from '../components/CreateStudents.vue'
 
 
 <template>
-  <CreateStudents />
+  <CreateStudents/>
 </template>
 
