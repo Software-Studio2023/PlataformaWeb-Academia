@@ -35,25 +35,17 @@ const store =  createStore({
   },
 
   actions:{
-    login({commit}, {email, password}){
-      return new Promise((resolve, reject) => {
-        axios.post('http://localhost:3000/api/auth/login/', {
+    async login({commit}, {email, password}){
+    const response =  await axios.post('http://localhost:3000/api/auth/login/', {
                email,
                password
         })
-          .then(response => {
-             const access = response.data.access;
-             const studentname = response.data.name;
-             commit('setAccess', access);
-             commit('setWelcomeMessage', studentname)
-             resolve();
-             })
-            .catch(error => {
-             console.error(error);
-             reject(error);
-           });
-      })
-    },
+
+       const access = response.data.access
+       const studentname = response.data.name
+       commit('setAccess', access)
+       commit('setWelcomeMessage', studentname)         
+     },
   },
 
 
