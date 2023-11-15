@@ -1,14 +1,13 @@
 <script setup>
-import {RouterLink, RouterView} from 'vue-router'
+import { RouterLink } from 'vue-router';	
 </script>
 
 <template>
-    <div>
-        <nav>
-        	<RouterLink to="">Cursos</RouterLink>
-            <RouterLink to="/">Cerrar Sesion</RouterLink>
-        </nav>
-    </div >
+<nav>
+<RouterLink to="/">Inicio</RouterLink>
+<RouterLink to="/registroestudiante">Registro de Estudiante</RouterLink>
+<RouterLink to="/iniciosesion">Inicio Sesion</RouterLink>
+</nav>
 </template>
 
 <style scoped>
