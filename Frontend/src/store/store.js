@@ -3,8 +3,8 @@ import axios from 'axios';
 
 const store =  createStore({
   state: {
-  	access: '',
-  	refresh: ''
+    access: '',
+    refresh: ''
   },
 
   mutations: {
@@ -29,13 +29,13 @@ const store =  createStore({
   },
 
   actions:{
-  	login({commit}, {email, password}){
-  		return new Promise((resolve, reject) => {
-  			axios.post('http://localhost:3000/api/auth/login/', {
+    login({commit}, {email, password}){
+      return new Promise((resolve, reject) => {
+        axios.post('http://localhost:3000/api/auth/login/', {
                email,
                password
-  			})
-  		    .then(response => {
+        })
+          .then(response => {
              const access = response.data.access;
              commit('setAccess', access);
              resolve();
@@ -44,8 +44,8 @@ const store =  createStore({
              console.error(error);
              reject(error);
            });
-  		})
-  	}
+      })
+    }
     
   }
 

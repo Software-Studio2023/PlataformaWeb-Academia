@@ -1,3 +1,10 @@
+<script setup>
+import Navigation from './Navigation.vue'
+</script>
+
+
 <template>
- <h1>Bienvenido</h1>
+    <Navigation/>
+    <h1>Bienvenido</h1>
 </template>
+

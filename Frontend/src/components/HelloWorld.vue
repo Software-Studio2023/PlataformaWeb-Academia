@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import logomarca from '../assets/logomarca.png'
+import NavigationPrincipal from './NavigationPrincipal.vue'
 
 const course = ref([]);
 
@@ -21,8 +22,8 @@ onMounted(() => {
 
 <template>
   <div>
+    <NavigationPrincipal />
    <h1>Software Studio</h1>
-   <p>Academy</p>
    </div>
    <div  class="greetings">
    <img :src="logomarca" />

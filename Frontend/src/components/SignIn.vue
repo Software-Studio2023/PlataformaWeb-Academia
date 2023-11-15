@@ -1,6 +1,6 @@
 <template>
  <div>
- 	<h1>Inicio Sesión</h1>
+ <h1>Inicio Sesión</h1>
  <form @submit.prevent="signIn">
    <label for="studentsEmail">Email</label>
     <input type="text" id="stundentsEmail" v-model="studentsEmail" required>
