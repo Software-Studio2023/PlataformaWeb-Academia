@@ -5,7 +5,7 @@
    <label for="studentsEmail">Email</label>
     <input type="text" id="stundentsEmail" v-model="studentsEmail" required>
      <label for="studentsPassword">Contraseña</label>
-     <input type="text" id="studentsPassword" v-model="studentsPassword" required>
+     <input type="password" id="studentsPassword" v-model="studentsPassword" required>
     <button type="submit">Enviar</button>
 </form>
  </div>

@@ -14,6 +14,9 @@
 
            <label for="studentsRol">Indique su Rol</label>
            <input type="text" id="studentsRol" v-model="studentsRol" required>
+
+           <label for="studentsPassword">Contraseña</label>
+           <input type="password" id="studentsPassword" v-model="studentsPassword" required>
             <button type="submit">Enviar</button>
         </form>
     </div>
@@ -27,11 +30,12 @@
     const studentsLastname = ref("");
     const studentsEmail = ref("");
     const studentsRol = ref("");
+    const studentsPassword = ref("")
 
     const CreateStudents = async() => {
         const response = await 
-        axios.post('http://localhost:3000/api/students/', { name:studentsName.value, lastname:studentsLastname.value, email:studentsEmail.value, rol:studentsRol.value})
-        console.log(response.data);
+        axios.post('http://localhost:3000/api/students/', { name:studentsName.value, lastname:studentsLastname.value, email:studentsEmail.value, rol:studentsRol.value, password:studentsPassword.value})
+        
     }
 
 </script>
