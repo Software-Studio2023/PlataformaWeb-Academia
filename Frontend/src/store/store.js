@@ -4,7 +4,9 @@ import axios from 'axios';
 const store =  createStore({
   state: {
     access: '',
-    refresh: ''
+    refresh: '',
+    idstudent: '',
+    namestudent: ''
   },
 
   mutations: {
@@ -26,6 +28,10 @@ const store =  createStore({
        localStorage.setItem('access', access)
     },
 
+    setWelcomeMessage(state, message){
+      state.namestudent = message
+    }
+
   },
 
   actions:{
@@ -37,7 +43,9 @@ const store =  createStore({
         })
           .then(response => {
              const access = response.data.access;
+             const studentname = response.data.name;
              commit('setAccess', access);
+             commit('setWelcomeMessage', studentname)
              resolve();
              })
             .catch(error => {
@@ -45,9 +53,8 @@ const store =  createStore({
              reject(error);
            });
       })
-    }
-    
-  }
+    },
+  },
 
 
 

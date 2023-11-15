@@ -17,6 +17,8 @@ class SignIn(APIView):
             if userstudents.check_password(password):
                 refresh = RefreshToken.for_user(userstudents)
                 return Response({
+                    'id': userstudents.id,
+                    'name': userstudents.name,
                     'refresh': str(refresh),
                     'access': str(refresh.access_token),
                 }, status=status.HTTP_200_OK)
