@@ -23,7 +23,8 @@
 </template>
 
 <script setup>
-    import  {ref} from 'vue';
+    import Swal from 'sweetalert2';
+    import  {VueElement, ref} from 'vue';
     import axios from 'axios';
     
     const studentsName = ref("");
@@ -35,7 +36,13 @@
     const CreateStudents = async() => {
         const response = await 
         axios.post('http://localhost:3000/api/students/', { name:studentsName.value, lastname:studentsLastname.value, email:studentsEmail.value, rol:studentsRol.value, password:studentsPassword.value})
-        
+        confirmAlert()
     }
-
+    const confirmAlert = () => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Registrado Exitosamente',
+            text: 'Inicia sesion para poder acceder a nuestro cursos'
+        })
+    }
 </script>

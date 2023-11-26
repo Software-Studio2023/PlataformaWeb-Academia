@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, toDisplayString } from 'vue';
 import { useStore } from 'vuex';
 import Navigation from './Navigation.vue'
 import axios from 'axios';
@@ -15,7 +15,6 @@ const getIdStudent = async () => {
 onMounted(() => {
  getIdStudent()
 })
-
 </script>
 
 

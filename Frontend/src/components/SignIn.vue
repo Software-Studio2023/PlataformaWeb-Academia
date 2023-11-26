@@ -23,15 +23,17 @@ const router = useRouter();
 
 const signIn = () => {
 
-store.dispatch('login', {
+   store.dispatch('login', {
 	email: studentsEmail.value,
 	password: studentsPassword.value
-})
+   })
 
-.then(()=>{
+   .then(()=>{
    router.push('/dashboard')
-})
-
+   })
 }
 
 </script>
+
+<style>
+</style>
