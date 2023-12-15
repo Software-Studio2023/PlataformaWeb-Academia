@@ -1,22 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
 import logomarca from '../assets/logomarca.png'
 import NavigationPrincipal from './NavigationPrincipal.vue'
-
-const course = ref([]);
-
-
-const getCourse = async () => {
-   const response = await axios.get('http://localhost:3000/api/curso/')
-   const result = response.data
-   console.log(result)
-
-}
-
-onMounted(() => {
-  getCourse()
-})
 
 </script>
 
