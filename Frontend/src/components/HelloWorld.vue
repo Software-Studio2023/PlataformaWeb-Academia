@@ -69,9 +69,6 @@ h1{
   border-color: blue;
   display: flex;
 }
-.title1{
-  
-}
 .contexto{
   margin-right: 20px;
   font-size: 20px;
