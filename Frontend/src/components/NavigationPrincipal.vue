@@ -12,11 +12,18 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 nav {
-  width: 100%;
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
-  margin-top: 2rem;
+  border: 4px;
+  border-radius: 36px;
+  border-style: solid;
+  padding: 10px;
+  width: 60%;
+  border-color: blue;
+  background-color: lightblue;
+ 
 }
+
 
 nav a.router-link-exact-active {
   color: var(--color-text);
@@ -35,4 +42,5 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
+
 </style>
