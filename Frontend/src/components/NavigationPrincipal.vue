@@ -21,7 +21,7 @@ nav {
   width: 60%;
   border-color: blue;
   background-color: lightblue;
- 
+  
 }
 
 

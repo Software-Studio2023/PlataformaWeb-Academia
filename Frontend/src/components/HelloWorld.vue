@@ -1,5 +1,6 @@
 <script setup>
 import NavigationPrincipal from './NavigationPrincipal.vue'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 </script>
 <template>
@@ -14,7 +15,7 @@ import NavigationPrincipal from './NavigationPrincipal.vue'
             , a traves de cursos que se relizan de forma presenciañ con el objetivo de dar las herramientas
             necesarias a las personas, para impulsar el avance tecnologico.
           </p>
-          <img src="../assets/logomarca.png">
+          <img class="logomarca" src="../assets/logomarca.png">
       </section>
 
       <section class="cursos">
@@ -24,15 +25,23 @@ import NavigationPrincipal from './NavigationPrincipal.vue'
             necesarias a las personas, para impulsar el avance tecnologico.</p>
       </section>
 
-      <section class="trabajos">
+      <section class="container">
+        <h2>Aprende IA con nosotros</h2>
+        <p>Somos una empresa orientada al aprendizaje en el mundo de la programacion, puedes aprender con nosotros
+          como crear una inteligencia artificial. Puede interactuar con nuestra IA de reconocimiento Facial.
+        </p>
+            <a class="btn btn-outline-primary" href="http://localhost:3000/video/">Probar IA</a>
+      </section>
+
+      <section> 
         <h2>Trabajos realizados</h2>
-        <p>Somos una empresa orientada al aprendizaje en el mundo de la programacion y bases de datos
-            , a traves de cursos que se relizan de forma presenciañ con el objetivo de dar las herramientas
-            necesarias a las personas, para impulsar el avance tecnologico.</p>
+        <img src="../assets/cursos.jpeg" alt="">
+        <img src="../assets/Exp.jpeg" alt="">
+        <img src="../assets/fundadora.jpeg" alt="">
       </section>
       
-      <footer>
-        <h2>Derechos autor Software Studio 2023</h2>
+      <footer class="text-center">
+        <h4>Derechos autor Software Studio 2023</h4>
       </footer>
    </body>
 </template>
@@ -64,8 +73,7 @@ h1{
   margin-left: 20px;
   background-color: cyan;
   border-style: solid;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 20px;
   border-color: blue;
   display: flex;
 }
@@ -75,10 +83,16 @@ h1{
   align-items: center;
   justify-content: center;
 }
-
-img{
+.logomarca{
   width: 100px;
   height: 100px;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  
 }
 
 .cursos{
@@ -88,12 +102,13 @@ img{
   border-color: black;
   margin-left: 300px;
   margin-right: 20px;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-radius: 20px;
 }
- .trabajos{
-  text-align: left;
-  width: 1200px;
- }
 
+.container{
+  background-color: lightgray;
+  border: 4px;
+  border-radius: 20px;
+  border-style: solid;
+}
 </style>

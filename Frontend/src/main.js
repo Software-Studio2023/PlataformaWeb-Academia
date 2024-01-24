@@ -4,7 +4,6 @@ import router from './router'
 import store from './store/store.js'
 import VueSweetalert2 from 'vue-sweetalert2'
 import 'sweetalert2/dist/sweetalert2.min.css'
-import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const app = createApp(App)
